@@ -13,10 +13,12 @@ public class UserLoginData implements Serializable {
 	/**
 	 * 
 	 */
-	public static final long serialVersionUID = 1L;
+	public static final long serialVersionUID = 2L;
 	public String  passwordData;
 	public boolean sessionData;
 	public String  loginData;
+	private String registration;
+	private String enter;
 	
 	public UserLoginData() {
 		// TODO Auto-generated constructor stub
@@ -62,6 +64,30 @@ public class UserLoginData implements Serializable {
 
 	public void setLoginData(String loginData) {
 		this.loginData = loginData;
+	}
+
+
+
+	public String getRegistration() {
+		return registration;
+	}
+
+
+
+	public void setRegistration(String registration) {
+		this.registration = registration;
+	}
+
+
+
+	public String getEnter() {
+		return enter;
+	}
+
+
+
+	public void setEnter(String enter) {
+		this.enter = enter;
 	}
 
 	
