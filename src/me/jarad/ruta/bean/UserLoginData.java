@@ -1,4 +1,4 @@
-package me.jarad.bean;
+package me.jarad.ruta.bean;
 
 import java.io.Serializable;
 

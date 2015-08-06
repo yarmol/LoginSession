@@ -9,7 +9,7 @@
 <title>Redirecting...</title>
 </head>
 <body>
-<jsp:useBean  id = "loginForm"  class = "me.jarad.bean.UserLoginData" scope = "session"/>
+<jsp:useBean  id = "loginForm"  class = "me.jarad.ruta.bean.UserLoginData" scope = "session"/>
 <jsp:setProperty name = "loginForm" property = "*"/>
 <h2>Checking your data...</h2>
 </body>

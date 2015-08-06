@@ -1,6 +1,6 @@
-package me.jarad.core;
+package me.jarad.ruta.core;
 
-import me.jarad.bean.*;
+import me.jarad.ruta.bean.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -57,7 +57,8 @@ public class LoginProcessServlet extends HttpServlet {
 					
 				}
 				
-		
+	
+		//java.security.MessageDigest.getInstance("SHA-1")
 				
 		outputWriter.write(userCredentials.getLoginData());
 		outputWriter.write("-");

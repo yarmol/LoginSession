@@ -1,6 +1,6 @@
-package me.jarad.core;
+package me.jarad.ruta.core;
 
-import me.jarad.bean.UserLoginData;
+import me.jarad.ruta.bean.UserLoginData;
 
 public class CredentialChecker {
 	private UserLoginData userData;
