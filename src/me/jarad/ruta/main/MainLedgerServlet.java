@@ -1,4 +1,4 @@
-package me.jarad.ruta.core;
+package me.jarad.ruta.main;
 
 import me.jarad.ruta.bean.*;
 
@@ -19,14 +19,14 @@ import javax.servlet.http.HttpSession;
  * Servlet implementation class CoreServlet
  */
 
-@WebServlet("/loginProcess")
-public class LoginProcessServlet extends HttpServlet {
+@WebServlet("/ledger")
+public class MainLedgerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LoginProcessServlet() {
+    public MainLedgerServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -40,7 +40,9 @@ public class LoginProcessServlet extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		UserLoginData userCredentials = null;
+		
+		
+		/*UserLoginData userCredentials = null;
 		
 		PrintWriter outputWriter = response.getWriter();
 	
@@ -73,7 +75,7 @@ public class LoginProcessServlet extends HttpServlet {
 		}
 		else {
 			outputWriter.write("Access granded");
-		}*/
+		}*/*/
 
 	}
 }

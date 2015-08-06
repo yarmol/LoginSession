@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<meta http-equiv="refresh" content="5;url=loginProcess"/>
+<meta http-equiv="refresh" content="5;url=ledger"/>
 <link href ="start.css" rel='stylesheet' type='text/css'>
 <title>Redirecting...</title>
 </head>

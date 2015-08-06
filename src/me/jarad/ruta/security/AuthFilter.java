@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import me.jarad.ruta.bean.UserLoginData;
-import me.jarad.ruta.core.SessionUser;
+import me.jarad.ruta.core.SessionUserData;
 
 /**
  * Servlet Filter implementation class AuthFilter
@@ -50,10 +50,10 @@ public class AuthFilter implements Filter {
 		request.setAttribute("loginForm", null);
 		
 		try {
-			SessionUser sessionUser = new SessionUser(userCredentials);
+			SessionUserData sessionUser = new SessionUserData(userCredentials);
 			
 			
-			currentSession.getServletContext().getRequestDispatcher("my.jsp").forward(request,response);
+			currentSession.getServletContext().getRequestDispatcher("").forward(request,response);
 			
 		} catch (NoSuchAlgorithmException e) {
 			

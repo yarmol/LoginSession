@@ -50,4 +50,11 @@
 		<nature>org.jboss.tools.cdi.core.cdinature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>WebContent/err.jsp</name>
+			<type>1</type>
+			<location>E:/Work/java2/LoginSubsystem/WebContent/error.jsp</location>
+		</link>
+	</linkedResources>
 </projectDescription>
