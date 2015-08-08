@@ -26,18 +26,33 @@
 	<div id="mainarea"></div>
 	
 	<div id="contentarea" class = "windows_areas" style="width:auto">
-		<h2>Routing documents</h2>
+		<h2>
+		  <input id = "rButtonSmall" type = submit name = "rButton" value = "OK">
+		  <input id = "rButtonSmall" type = submit name = "rButtonSmall" value = "save">
+		  <input id = "rButtonSmall" type = submit name = "rButtonSmall2" value = "cancel">
+		</h2>
+		<h2>      Document (new)</h2>
+	  <table width="294">
+        <tr>
+        <td width="137">Date</td><td width="145"><input type="text" placeholder="YYYYMMDD"></td>
+        </tr>
+        <tr>
+        <td width="137">Number</td>
+        <td width="145"><input type="text" placeholder="YYYYMMDD"></td>
+        </tr>
+      </table>
          
-		 Date:
-		 <input type="text" placeholder="YYYYMMDD"> <input type="text" placeholder="YYYYMMDD"> <br>
-         
- 		 <input id = "rButton" type = submit name = "new" value = "+">
-         <input id = "rButton" type = submit name = "new" value = "-">
-         <input id = "rButton" type = submit name = "new" value = "<-">
-         Page 5 / 10
-          <input id = "rButton" type = submit name = "new" value = "->">
-	  <br>
-         <table class = "rTable" >
+		 
+	  <p>&nbsp;</p>
+		 <p><br>
+		   
+		   <input id = "rButtonSmall" type = submit name = "new" value = "+">
+		   <input id = "rButtonSmall" type = submit name = "new" value = "-">
+		   <input id = "rButtonSmall" type = submit name = "new" value = "<-">
+		   <input id = "rButtonSmall" type = submit name = "new" value = "->">
+		   <br>
+         </p>
+	  <table class = "rTable" >
                     <tr>
                         <td>
                             Title 1
@@ -92,11 +107,18 @@
                             Row 3
                         </td>
                     </tr>
-                </table>
-		<br>
-	</div>
+      </table>
+      <p>
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date">
+      </p>
+	    <p><img src="images/maps.png" width="568" height="370" alt=""/><br>
+      </p>
+  </div>
 	
-	
+ <div>
+ 
+ </div>
 	
 	
 

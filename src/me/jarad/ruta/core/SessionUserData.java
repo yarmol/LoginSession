@@ -31,7 +31,8 @@ public class SessionUserData {
 		cypherObject.update(userData.getPasswordData().getBytes());
 		this.userPasswordHash = new String(cypherObject.digest());
 		
-		UserCredentialsDAO userDAO = new UserCredentialsDAO(this);
+		//UserCredentialsDAO userDAO = new UserCredentialsDAO(this);
+	
 		
 		
 	}

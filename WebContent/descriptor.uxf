@@ -1,0 +1,1310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>216</x>
+      <y>0</y>
+      <w>54</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>54</y>
+      <w>27</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>45</x>
+      <y>225</y>
+      <w>108</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JavaBean&gt;&gt;
+UserLoginData
+bg=gray
+--
+loginData
+passwordData
+sessionData
+registration
+enter
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>405</x>
+      <y>261</y>
+      <w>99</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=.
+/login.jsp</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>144</x>
+      <y>108</y>
+      <w>243</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>template= Form
+&lt;&lt;index.htm&gt;&gt;
+--
+[loginData]
+[passwordData]
+[sessionData]
+Button :  [registration]
+Button :  [enter]
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLSpecialState</id>
+    <coordinates>
+      <x>225</x>
+      <y>252</y>
+      <w>36</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>bg=green
+type=decision</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>144</x>
+      <y>261</y>
+      <w>99</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>207</y>
+      <w>27</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>315</y>
+      <w>189</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+m2=POST
+"registration"
+</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>252</y>
+      <w>171</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+m2=POST
+"enter"</panel_attributes>
+    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>576</x>
+      <y>306</y>
+      <w>216</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Filter&gt;&gt;
+Package::security	
+AuthFilter
+--
+currentSession.
+  getAttribute("userLogin")
+--
+doFilter() {
+	credCheckResult = ...
+	if (credCheckResult.isAccessGranted) 
+	 {
+		setAttr("user",credCheckResult.user);
+	 }
+}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>324</y>
+      <w>45</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+GET</panel_attributes>
+    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>279</y>
+      <w>27</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>450</y>
+      <w>189</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>template= /ledger
+&lt;&lt;Servlet&gt;&gt;
+Package::main
+MainLedgerServlet
+--
+ C into session
+ model is part of C
+--
+set main_ledger.jsp 
+attrs</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>333</y>
+      <w>144</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+request</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>369</y>
+      <w>144</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.
+response</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1170</x>
+      <y>279</y>
+      <w>144</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+Package::main	
+SessionUserData
+--
+userLogin
+userPasswordHash
+--
+SessionUserData(UserLoginData)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>801</x>
+      <y>180</y>
+      <w>108</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;JavaBean&gt;&gt;
+UserLoginData
+bg=gray
+--
+loginData
+passwordData
+sessionData
+registration
+enter
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>783</x>
+      <y>378</y>
+      <w>153</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>855</x>
+      <y>270</y>
+      <w>27</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1206</x>
+      <y>126</y>
+      <w>108</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+MessageDigest
+--
+digest()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1215</x>
+      <y>207</y>
+      <w>27</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1242</x>
+      <y>207</y>
+      <w>81</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=[encrypted]-&gt;
+
+</panel_attributes>
+    <additional_attributes>40.0;10.0;40.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>351</x>
+      <y>909</y>
+      <w>108</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;DTO&gt;&gt;
+UserDTO
+--
+id
+uuid
+firstName
+lastName
+passwordHash
+bg=blue
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>513</x>
+      <y>1062</y>
+      <w>135</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+Users
+--
+id 
+uuid
+firstName
+lastName
+passwordHash
+halign=left
+bg=yellow
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>189</x>
+      <y>1098</y>
+      <w>135</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+Roles
+--
+id 
+description
+halign=left
+bg=yellow
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>342</x>
+      <y>1152</y>
+      <w>135</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+UserRoles
+--
+id_user
+id_role
+value
+halign=left
+bg=yellow
+group=6</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>270</x>
+      <y>1269</y>
+      <w>135</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+DocumentStates
+--
+bg=yellow
+id
+description
+halign=left
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>270</x>
+      <y>1350</y>
+      <w>198</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+DocumentOperationKinds
+--
+id
+bg=yellow
+description
+halign=left
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>270</x>
+      <y>1431</y>
+      <w>198</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+Subdivisions
+--
+id
+uuid
+bg=yellow
+description
+halign=left
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>270</x>
+      <y>1530</y>
+      <w>198</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+FuelTypes
+--
+id
+uuid
+bg=yellow
+description
+halign=left
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>270</x>
+      <y>1647</y>
+      <w>198</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+FuelPrice
+--
+id_fuel
+bg=yellow
+datePrice
+amount
+halign=left
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>558</x>
+      <y>1539</y>
+      <w>198</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+Transports
+--
+id
+uuid
+description
+halign=left
+bg=yellow
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>441</x>
+      <y>1125</y>
+      <w>90</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+1:n
+group=6</panel_attributes>
+    <additional_attributes>10.0;60.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>225</x>
+      <y>1170</y>
+      <w>135</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+1:n
+group=6</panel_attributes>
+    <additional_attributes>130.0;30.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>531</x>
+      <y>1251</y>
+      <w>135</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+RoutePlanning
+--
+id
+bg=yellow
+uuid 
+documentNumber
+documentDate
+id_user
+id_documentState
+id_subdivision
+id_operationKind
+id_fuel
+id_transport
+fuelPrice
+distanceAmount
+sumAmount
+
+halign=left
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>711</x>
+      <y>1251</y>
+      <w>171</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+RoutePlanningData
+--
+id_document
+rowNum
+index
+marker
+fromDescription
+toDescription
+speed
+lat
+lng
+distance
+distanceSum
+bg=yellow
+
+halign=left
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>657</x>
+      <y>1323</y>
+      <w>72</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+1:n
+group=5</panel_attributes>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>351</x>
+      <y>1611</y>
+      <w>45</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+1:n
+group=5</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>459</x>
+      <y>1458</y>
+      <w>90</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>1:1
+group=5</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>459</x>
+      <y>1440</y>
+      <w>90</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>1:1
+group=5</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>459</x>
+      <y>1377</y>
+      <w>90</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>1:1
+group=5</panel_attributes>
+    <additional_attributes>80.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>396</x>
+      <y>1296</y>
+      <w>153</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>1:1
+group=5</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>1485</y>
+      <w>45</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>1:1
+group=5</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>567</x>
+      <y>1161</y>
+      <w>45</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>1:1
+group=6</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>954</x>
+      <y>1503</y>
+      <w>144</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Table&gt;&gt;
+ProcessQueue
+--
+id_Document
+dateOfIssue
+bg=yellow
+
+halign=left
+group=5</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>648</x>
+      <y>1485</y>
+      <w>324</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+1:n
+group=5</panel_attributes>
+    <additional_attributes>340.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>369</x>
+      <y>1008</y>
+      <w>162</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>1260</y>
+      <w>108</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;DTO&gt;&gt;
+CatalogDTO
+--
+id
+uuid
+description
+bg=blue
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>99</x>
+      <y>1287</y>
+      <w>189</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>99</x>
+      <y>1305</y>
+      <w>189</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>99</x>
+      <y>1323</y>
+      <w>189</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>99</x>
+      <y>1332</y>
+      <w>189</w>
+      <h>261</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;270.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>99</x>
+      <y>1134</y>
+      <w>108</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>711</x>
+      <y>990</y>
+      <w>162</w>
+      <h>225</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;DTO&gt;&gt;
+DocumentDTO
+--
+id
+uuid 
+documentNumber
+documentDate
+id_user
+id_documentState
+id_subdivision
+id_operationKind
+id_fuel
+id_transport
+fuelPrice
+distanceAmount
+sumAmount
+bg=blue
+List&lt;Row&gt; routeData
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>1089</y>
+      <w>99</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;180.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>954</x>
+      <y>1296</y>
+      <w>162</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;DTO&gt;&gt;
+DocumentQueueDTO
+--
+id_document
+uuid_document
+dateIssue
+bg=blue
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1017</x>
+      <y>1377</y>
+      <w>27</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>234</x>
+      <y>810</y>
+      <w>144</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;DAO&gt;&gt;
+UserDataSupplier
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>612</y>
+      <w>396</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;DAO&gt;&gt;
+/AbstractClassSupplier/
+bg=green
+--
+DBSupplier
+--
+AbstractClassSupplier getByUUID()
+AbstractClassSupplier getById()
+AbstractClassSupplier getAttribute(attrbute,value)
+AbstractClassSupplier createNew()
+AbstractClassSupplier delete()
+void setId(value)
+void setUUID(value)
+void setAttribute(attrbute,value)
+List&lt;T&gt; getList(FilterParams)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>99</x>
+      <y>1287</y>
+      <w>495</w>
+      <h>324</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>530.0;340.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>774</y>
+      <w>54</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>40.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>810</y>
+      <w>162</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;DAO&gt;&gt;
+DocumentDataSupplier
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>774</y>
+      <w>27</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>567</x>
+      <y>810</y>
+      <w>162</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;DAO&gt;&gt;
+CatalogDataSupplier
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>657</x>
+      <y>774</y>
+      <w>27</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>576</x>
+      <y>216</y>
+      <w>180</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=.
+/error.jsp
+out.getErrorCode()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>954</x>
+      <y>927</y>
+      <w>216</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>JDBC Connection 
+bg=yellow
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>954</x>
+      <y>981</y>
+      <w>216</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>JDBC DataSource 
+bg=yellow
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>954</x>
+      <y>1035</y>
+      <w>216</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>JDBC DataSourcePool 
+bg=yellow
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>954</x>
+      <y>1089</y>
+      <w>216</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>EAS JNDI Lookup Connection
+bg=yellow
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>954</x>
+      <y>1134</y>
+      <w>216</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>EAS injection Connection
+bg=yellow
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>954</x>
+      <y>1188</y>
+      <w>216</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>Tomcat DB 
+bg=yellow
+type=sender</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLObject</id>
+    <coordinates>
+      <x>1071</x>
+      <y>432</y>
+      <w>117</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Object&gt;&gt;
+sessionUserData
+bg=gray
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>918</x>
+      <y>342</y>
+      <w>162</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>CheckCredentials
+--
+CheckCredentials()
+CredentialsCheckResult 
+   getPermission()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>693</x>
+      <y>396</y>
+      <w>315</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>330.0;10.0;10.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1008</x>
+      <y>621</y>
+      <w>153</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+Package::main	
+CredentialsCheckResult
+--
+userDomainObject
+isAccessGranted
+
+
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>819</x>
+      <y>576</y>
+      <w>153</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Class&gt;&gt;
+Package::main	
+UserDomainObject
+--
+userLogin
+userName
+userUUID
+userPermissions
+userSubdivision
+
+
+group=8</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>963</x>
+      <y>657</y>
+      <w>63</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
+group=8</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1071</x>
+      <y>360</y>
+      <w>117</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1125</x>
+      <y>378</y>
+      <w>27</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1071</x>
+      <y>378</y>
+      <w>117</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>936</x>
+      <y>432</y>
+      <w>153</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>927</x>
+      <y>477</y>
+      <w>144</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>693</x>
+      <y>396</y>
+      <w>360</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>380.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>684</x>
+      <y>252</y>
+      <w>126</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+noPermission=true</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>531</y>
+      <w>72</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>243</x>
+      <y>495</y>
+      <w>108</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>page view MVC
+bg=orange
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>342</x>
+      <y>504</y>
+      <w>72</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
