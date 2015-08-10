@@ -23,6 +23,7 @@
 	<div id="contentarea" class = "windows_areas" style="width:auto">
 		<h2>"${mainHeader}"</h2>
 		<form action = "/main">
+		<!--header button data -->
         <input id = "rButton" type = submit name = "new" value = "createNew"><br>
         
         <!--table data-->
