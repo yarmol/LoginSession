@@ -15,9 +15,8 @@
 <body>
 
 <div id="page">
-	<div id="header" class = "windows_areas">
-		<jsp:include page="/header.jsp"></jsp:include>
-	</div>
+	<%@include file="/jspf/header.jspf" %>
+	
 	<div id="mainarea"></div>
 	
 	<div id="contentarea" class = "windows_areas" style="width:auto">

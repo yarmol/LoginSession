@@ -1,5 +1,4 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<div id="header" class = "windows_areas">
 	<div id="headerleft">
 		<h1><a href="#">"${companyName}"</a></h1></div>
 		<div id="menulinks">
@@ -7,3 +6,4 @@
 				<a href="{$headerDescriptor.key}"><c:out value="{$headerDescriptor.value.getDescription}"></c:out>     </a>
 		</c:forEach>
 	</div>
+</div>
