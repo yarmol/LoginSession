@@ -1,0 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c"%>
+<c:forEach var="button" items = "${headerButtons}">
+	<input id = "rButton" type = submit 
+			name = <c:out value="button.name"></c:out>
+	 		value = "button.value"><br>
+</c:forEach>

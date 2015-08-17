@@ -1,0 +1,11 @@
+ <table width="300">
+ 	<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c"%>
+	<c:forEach var="field" items = "${field}">
+    <tr>
+        <td width="135">field.description</td>
+        <td width="145">
+    
+        <input type="field.type" placeholder="field.defaultValue" value="field.value" name = "field.name"></td>
+    </tr>
+    </c:forEach>
+ </table>
