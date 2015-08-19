@@ -20,8 +20,8 @@ import me.jarad.ruta.core.SessionUserData;
 /**
  * Servlet Filter implementation class AuthFilter
  */
-@WebFilter(dispatcherTypes = {DispatcherType.REQUEST }
-					, servletNames = { "LoginProcessServlet" })
+//@WebFilter(dispatcherTypes = {DispatcherType.REQUEST }
+//					, servletNames = { "MainLedgerServlet" })
 public class AuthFilter implements Filter {
 
     /**
@@ -43,22 +43,29 @@ public class AuthFilter implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
-
+		HttpSession currentSession = ((HttpServletRequest) request).getSession(true);
+		
+		/*
 	
 		HttpSession currentSession = ((HttpServletRequest) request).getSession(true);
 		UserLoginData userCredentials = (UserLoginData) currentSession.getAttribute("loginForm");
+		
+		System.out.println("doFilter");
+		
 		request.setAttribute("loginForm", null);
 		
+		
+		
 		try {
-			SessionUserData sessionUser = new SessionUserData(userCredentials);
+			SessionUserData sessionUser = new SessionUserData(userCredentials, currentSession);
+			sessionUser.setUserData();
 			
-			
-			currentSession.getServletContext().getRequestDispatcher("").forward(request,response);
+			currentSession.getServletContext().getRequestDispatcher("/ledger").forward(request,response);
 			
 		} catch (NoSuchAlgorithmException e) {
 			
 			e.printStackTrace();
-		}
+		} */
 		
 		chain.doFilter(request, response);
 	}

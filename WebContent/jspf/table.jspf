@@ -1,0 +1,97 @@
+ <div class="datagrid"><table>
+		 <thead>
+		 
+		 <tr>
+		
+		 <!--
+		 <th>header 1</th>
+		 <th>header 2</th>
+		 <th>header 3</th>
+		 <th>header 4</th> -->
+		 
+		 <c:set var = "typeId" value = "${tableOfDocs.getType()}" scope = "page" />
+		 <c:set var = "attributesList" value = "${tableOfDocs.getListOfAttributes()}" scope = "page" />
+		 <c:set var = "fieldsList" value = "${tableOfDocs.getListOfFields()}" scope = "page" />
+		 <c:forEach var = "fieldName" items="${fieldsList}">
+			 	<th>${fieldName.getLocalName()}</th>
+		 </c:forEach>
+		 <c:forEach var = "colName" items="${attributesList}">
+		 			<th>${colName.getLocalName()}</th>
+		 </c:forEach>
+		 
+		 </tr>
+		 
+		 </thead>
+		 <tfoot>
+			<tr>
+			    <c:set var = "columnsCount" value = "${attributesList.size()+fieldsList.size()}" scope = "page" />
+			    <c:set var = "pagesCount" value = "${tableOfDocs.getPagesCount()}" scope = "page" />
+			    <c:set var = "activePage" value = "${tableOfDocs.getActivePage()}" scope = "page" />
+				<td colspan="${columnsCount}">
+					<div id="paging">
+						<ul>
+							<li><a href="${servletName}/ledger?typeId=${typeId}&page=first"><<</a></li>
+							<c:forEach begin="1" end="${pagesCount}" var="i">
+   	   									 <li><a href="${servletName}/ledger?typeId=${typeId}&page=${i}" 
+   	   									 
+   	   									  	 <c:if test = "${i == activePage}">
+   	   									    	 class="active"
+   	   									     </c:if>
+   	   									     
+   	   									     >${i}
+   	   									 
+   	   									 </a></li>
+   	
+							</c:forEach>
+							
+							<%--<li><a href="#" class="active">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>  
+							<li><a href="#">>>--%>
+							<li><a href="${servletName}/ledger?typeId=${typeId}&page=last">>></a></li>
+							</a></li></ul></div></tr>
+		</tfoot>
+		<tbody>
+		
+		<!-- row -->
+		 
+		 <c:set var = "objectList" value = "${tableOfDocs.getlistObjects()}" scope = "page" />
+		 <c:forEach var = "object" items="${objectList}">
+		 <tr>
+		 	<c:forEach var = "fieldName" items="${fieldsList}">
+		 		<c:set var = "fieldIdName" value = "${fieldName.getIdName()}" scope = "page" />
+		 			<%--<if test="${fieldIdName == 'numberOf'}">
+		 				<c:set var = "uuid" value = "${object['uuid']}" scope = "page" />
+		 					<td> <a href="/getDoc?typeId=${typeId}?&ref=${uuid}"  class="table_link"> ${object["numberOf"]}</td>
+		 			</if>
+		 				<c:if test="${fieldIdName == 'dateOf'}">
+		 				<td>${object["dateOf"]}</td>
+		 			</if> --%>
+		 			<c:choose>
+		 				<c:when test="${fieldIdName == 'numberOf'}">
+		 					<c:set var = "uuid" value = "${object['uuid']}" scope = "page" />
+		 				    <td> <a href="${servletName}/doc?typeId=${typeId}?&ref=${uuid}"  class="table_link"> ${object['numberOf']}</td>
+		 				</c:when>
+		 				<c:otherwise>
+		 					<td>${object[fieldIdName]}</td>
+		 				</c:otherwise>
+		 			</c:choose>
+		 			
+			</c:forEach>
+		 	
+		 	<c:forEach var = "colName" items="${attributesList}">
+		 			<c:set var = "columnIdName" value = "${colName.getIdName()}" scope = "page" />
+		 			<c:set var = "attributesCollection" value = "${object.getAttributes()}" scope = "page" /> 
+		 			
+    				<td>${attributesCollection[columnIdName]}</td>			
+  					
+		 	</c:forEach>
+		 	</tr>
+		 </c:forEach>
+		 
+	 
+		</tbody>
+		</table>
+		</div> 

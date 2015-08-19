@@ -5,12 +5,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta http-equiv="refresh" content="5;url=ledger"/>
-<link href ="start.css" rel='stylesheet' type='text/css'>
+<link href ="style.css" rel='stylesheet' type='text/css'>
 <title>Redirecting...</title>
 </head>
 <body>
 <jsp:useBean  id = "loginForm"  class = "me.jarad.ruta.bean.UserLoginData" scope = "session"/>
 <jsp:setProperty name = "loginForm" property = "*"/>
-<h2>Checking your data...</h2>
+<%@ page import="java.text.SimpleDateFormat,java.util.Date"%>
+<h1>Checking your data... 
+	<% 
+	  
+	  
+	  long timeOfSession 			  = session.getCreationTime();
+	  SimpleDateFormat  dataFormat    = new SimpleDateFormat();
+	  String dateView    			  = dataFormat.format(new Date(timeOfSession));
+	  out.println(session.getId());
+	  out.println(dateView);
+	
+	
+	%> </h1>
 </body>
 </html>

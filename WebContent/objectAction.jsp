@@ -26,7 +26,7 @@
 		<!--header button data -->
         <%@include file="/jspf/headerButton.jspf"%>
         <!--table data-->
-        <%@include file="/jspf/tables.jspf"%>
+        <%-- @include file="/jspf/tables.jspf"--%>
 		</form>
         <br>
 

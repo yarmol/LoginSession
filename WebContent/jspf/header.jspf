@@ -1,11 +1,27 @@
-<div id="header" class = "windows_areas">
-	<div id="headerleft">
-		<h1><a href="#">"${companyName}"</a></h1></div>
-		<div id="menulinks">
-		<c:forEach var = "headerDescriptor" items = "${headerDescriptors}"> 
-				<a href="{$headerDescriptor.key}"><c:out value="{$headerDescriptor.value.getDescription}"></c:out>     </a>
-		</c:forEach>
-	</div>
-</div>
-
+<header>
+		<div class="img"> <img src = "images/logo.png" id="logo" width = "78" height = "78" padding="5"; class="leftimg"/></div>			
+        <div class="container row">
+          <h1 class="col span_12">${mainTitle}</h1>
+	      <nav class="col span_12">
+                <ul>
+                    <!--<li><a href="/ledger" target = "/ml">Журнал</a></li>
+                    <li><a href="/reference" target="_blank">Справочники</a></li>
+                    <li><a href="/user" target="_blank">Пользователь</a></li>
+                    <li><a href="/settings">Настройки</a></li>
+					<li><a href="/exit">Выход</a></li> -->
+					
+					<c:forEach var = "headerDescriptor" items = "${headerPage}"> 
+					 		 
+							<c:set var = "headerValue" value = "${headerDescriptor.getIdName()}" />
+							<c:set var = "keyValue" value = "${headerDescriptor.getLocalName()}" />
+							<li><a href="${headerValue}">
+							<c:out value="${keyValue}"></c:out></a></li>
+					</c:forEach>
+					
+                </ul>
+            </nav>
+            <h2>${pageTitle}</h2>
+        </div> 
 		
+		
+	</header>
