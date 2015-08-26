@@ -65,10 +65,10 @@
 	<!--header-->
 	
 	<%@ include file = "/jspf/header.jspf" %>
-	
+	 
 	<div class = "windows_areas">
 		
-		
+		<form action="ledger" method="post">
          
 		 Период:
 		 
@@ -88,6 +88,7 @@
 		  
 		
 		<br>
+		</form>
 	</div>
 </div>
 

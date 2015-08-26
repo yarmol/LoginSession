@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <system-libraries>
     <library path="E:/Program Files/glassfish-4.1/glassfish4/glassfish/modules/javax.servlet-api.jar" source="C:/Users/vitaly/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-sources.jar"/>
+    <library path="E:/Program Files/glassfish-4.1/glassfish4/glassfish/modules/org.eclipse.persistence.core.jar" source="C:/Users/vitaly/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.core/2.5.2/org.eclipse.persistence.core-2.5.2-sources.jar"/>
 </system-libraries>

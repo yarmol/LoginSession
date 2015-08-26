@@ -1,7 +1,8 @@
 package me.jarad.ruta.security;
 
 import java.io.IOException;
-import java.security.NoSuchAlgorithmException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.servlet.DispatcherType;
 import javax.servlet.Filter;
@@ -12,16 +13,25 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequestWrapper;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletResponseWrapper;
 import javax.servlet.http.HttpSession;
 
 import me.jarad.ruta.bean.UserLoginData;
-import me.jarad.ruta.core.SessionUserData;
+import me.jarad.ruta.domain.UserDomain;
+import me.jarad.ruta.service.Log;
 
 /**
  * Servlet Filter implementation class AuthFilter
  */
-//@WebFilter(dispatcherTypes = {DispatcherType.REQUEST }
-//					, servletNames = { "MainLedgerServlet" })
+@WebFilter(dispatcherTypes = {
+				DispatcherType.REQUEST, 
+				DispatcherType.FORWARD, 
+				DispatcherType.INCLUDE, 
+				DispatcherType.ERROR
+		}
+		 , urlPatterns = { "/login" })
 public class AuthFilter implements Filter {
 
     /**
@@ -42,31 +52,35 @@ public class AuthFilter implements Filter {
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-
-		HttpSession currentSession = ((HttpServletRequest) request).getSession(true);
 		
-		/*
+	    
+   	    HttpSession currentSession = ((HttpServletRequest)request).getSession(false);
 	
-		HttpSession currentSession = ((HttpServletRequest) request).getSession(true);
-		UserLoginData userCredentials = (UserLoginData) currentSession.getAttribute("loginForm");
-		
-		System.out.println("doFilter");
-		
-		request.setAttribute("loginForm", null);
-		
-		
-		
-		try {
-			SessionUserData sessionUser = new SessionUserData(userCredentials, currentSession);
-			sessionUser.setUserData();
-			
-			currentSession.getServletContext().getRequestDispatcher("/ledger").forward(request,response);
-			
-		} catch (NoSuchAlgorithmException e) {
-			
-			e.printStackTrace();
-		} */
-		
+   	    if (!(currentSession == null)) {
+	   		Log.writeLog(Level.SEVERE, "User: ");  
+		 
+	   		UserLoginData userCredentials = (UserLoginData) currentSession.getAttribute("loginForm");
+	   		
+	   		CredentialsChecker userChecker = new CredentialsChecker(userCredentials);
+	   		AccessLevel accessCheckingResult = userChecker.checkUser();
+	   		
+	   		if (accessCheckingResult == AccessLevel.DENIED) {
+	   			HttpServletRequestWrapper wrappedRequest = new HttpServletRequestWrapper((HttpServletRequest) request);
+	   			HttpServletResponseWrapper wrappedResponse = new HttpServletResponseWrapper((HttpServletResponse) response);
+	   			Log.writeLog(Level.SEVERE, accessCheckingResult.toString());  
+	   			//currentSession.setAttribute("errorMessage", "Access is denied. User name is wrong" );
+	   			//wrappedResponse.sendRedirect(wrappedRequest.getContextPath() + "/error.jsp");
+	   			wrappedResponse.sendError(401, "Access is denied. User name is wrong");
+	   		}
+	   		else {
+	   			UserDomain user = new UserDomain(userCredentials,accessCheckingResult);
+	   			currentSession.setAttribute("user",user);
+	   		}
+	   		
+	   		
+	   	}
+	   	
+	   	    
 		chain.doFilter(request, response);
 	}
 

@@ -26,6 +26,7 @@ a.table_link:hover {
 
 
 input, select{
+	width: 150px;
     border: 5px solid white; 
     -webkit-box-shadow: 
       inset 0 0 8px  rgba(0,0,0,0.1),
@@ -38,8 +39,28 @@ input, select{
             0 0 8px rgba(0,0,0,0.1); 
     padding: 8px;
     background: rgba(255,255,255,0.5);
-    margin: 0 0 8px 0;
+    margin: 0 10px 8px 0;
 }
+
+
+.table_edit{
+	width: 400px;
+    border: 0px solid white; 
+    /*-webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 8px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 8px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 8px rgba(0,0,0,0.1); */
+    padding: 10 px;
+    background: rgba(255,255,255,0.5);
+    margin: 5px 5px 5px 5px;
+}
+
+
 
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
 	display:block
@@ -58,6 +79,11 @@ table{
 	border-spacing:0
 }
 
+.attributes{
+	padding: 3px 2px; 
+}
+
+
 *{
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
@@ -65,10 +91,20 @@ table{
 }
 
 .container{
-	max-width:960px;
-	margin:0 auto;
-	padding:0 20px
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 20px;
+	text-align: left;
+	float: left;
 }
+
+.container2{
+	width: 250px;
+	margin: 0 auto;
+	padding: 0 20px;
+	text-align: left;
+}
+
 
 .row:after,.col:after,.clr:after,.group:after{
 	content:"";
@@ -105,7 +141,7 @@ body{
 	color:gray;
 	font-family:"Open Sans",Arial,Helvetica,sans-serif;
 	font-size:14px;
-	background:#333
+	background:white;
 }
 
 a{
@@ -121,6 +157,7 @@ h1,h2,h3,h4,h5,h6{
 	-webkit-hyphens:auto;
 	-moz-hyphens:auto;
 	hyphens:auto;
+	padding: 20px 0px;
 	font-family:Raleway,Arial,Helvetica,sans-serif;
 	color:#404040;
 	line-height:1em;
@@ -184,7 +221,7 @@ h6{
 
 header{
 	margin:0;
-	padding:40px 0 20px 0;
+	padding:10px 0 10px 0;
 	width:100%;
 	background-color:#FFF;
 	background-image:linear-gradient(top,white 75%,whitesmoke 100%);
@@ -199,26 +236,26 @@ header{
 }
 
 nav{
-	font-size:16px
+	font-size:15px
 }
 
 nav ul{
-	text-align:right;
-	margin:15px 0 0 0;
+	text-align:left;
+	margin:5px 0 0 0;
 	padding:0
 }
 
 nav ul li{
-	display:inline-flex;
-	margin-left:25px;
+	/*display:inline;*/
+	margin-left:5 px;
 	text-transform:lowercase;
 	list-style:none
 }
-/*
+
 nav ul li:first-child{
 	margin-left:0
 }
-*/
+
 nav ul li a{
 	color:#404040;
 	text-decoration:none
@@ -861,5 +898,3 @@ div.dhtmlx_window_active, div.dhx_modal_cover_dv {
 	text-align: center;
 	font-size: 16pt;
 }
-
-

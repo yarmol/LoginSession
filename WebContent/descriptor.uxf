@@ -114,7 +114,7 @@ type=decision</panel_attributes>
       <x>729</x>
       <y>315</y>
       <w>189</w>
-      <h>36</h>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 m2=POST
@@ -128,7 +128,7 @@ m2=POST
       <x>747</x>
       <y>252</y>
       <w>171</w>
-      <h>36</h>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 m2=POST
@@ -1410,7 +1410,7 @@ halign=left</panel_attributes>
     <coordinates>
       <x>297</x>
       <y>1386</y>
-      <w>45</w>
+      <w>54</w>
       <h>117</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -1423,7 +1423,7 @@ m1=0..n</panel_attributes>
       <x>207</x>
       <y>1530</y>
       <w>99</w>
-      <h>27</h>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 m1=0..n</panel_attributes>

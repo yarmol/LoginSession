@@ -28,7 +28,7 @@ public class SessionUserData {
 		
 		this.userLogin = userData.getLoginData();
 		
-		System.out.println("userLogin="+userLogin);
+		//System.out.println("userLogin="+userLogin);
 		
 		MessageDigest cypherObject = java.security.MessageDigest.getInstance("SHA-1");
 		cypherObject.reset();
@@ -36,8 +36,8 @@ public class SessionUserData {
 		this.userPasswordHash = new String(cypherObject.digest());
 		this.currentSession = currentSession;
 		
-		System.out.println("this.userPasswordHash="+userPasswordHash);
-		System.out.println("this.getPasswordData="+userData.getPasswordData());
+		//System.out.println("this.userPasswordHash="+userPasswordHash);
+		//System.out.println("this.getPasswordData="+userData.getPasswordData());
 	}
 	
 	public void setUserData() {
